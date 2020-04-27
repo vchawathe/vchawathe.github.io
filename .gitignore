@@ -1,6 +1,6 @@
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
-
+/hello-next/.next/*
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
 wp-content/*
@@ -16,8 +16,23 @@ wp-content/themes/twenty*/
 
 # ignore node dependency directories
 guiserver/node_modules/*
+hello-next/node_modules/*
 
 # ignore log files and databases
-*.log
-*.sql
-*.sqlite
+gui/*.log
+gui/*.sql
+gui/*.sqlite
+
+
+// .gitnignore
+# next.js build output
+gui/.next
+# dotenv environment variables file (build for Zeit Now)
+gui/.env
+gui/.env.build
+# Dependency directories
+gui/node_modules/
+# Logs
+gui/npm-debug.log*
+gui/yarn-debug.log*
+gui/yarn-error.log*
